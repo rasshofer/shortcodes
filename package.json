@@ -1,0 +1,30 @@
+{
+  "name": "shortcodes",
+  "version": "0.0.1",
+  "description": "A simple library for creating shortcode macros to be used within content blocks",
+  "author": {
+    "name": "Thomas Rasshofer",
+    "email": "hello@thomasrasshofer.com",
+    "url": "http://thomasrasshofer.com/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rasshofer/shortcodes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rasshofer/shortcodes/issues"
+  },
+  "main": "shortcodes.js",
+  "keywords": [
+    "shortcodes",
+    "macros"
+  ],
+  "devDependencies": {
+    "jshint": "^2.9.4",
+    "tap": "^10.3.2"
+  },
+  "scripts": {
+    "test": "jshint shortcodes.js test/tests.js && tap test/tests.js --cov"
+  }
+}

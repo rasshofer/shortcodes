@@ -1,0 +1,7 @@
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+
+(pow: 123)
+
+Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+
+(sqrt: 9)
