@@ -70,12 +70,14 @@ Searches `input` for shortcodes, filters shortcodes through their hooks, and ret
 
 ## Changelog
 
+* 1.0.0
+  * Migrate to TypeScript
 * 0.0.1
   * Initial version
 
 ## License
 
-Copyright (c) 2017 [Thomas Rasshofer](http://thomasrasshofer.com/)  
+Copyright (c) 2020 [Thomas Rasshofer](https://thomasrasshofer.com/)  
 Licensed under the MIT license.
 
 See LICENSE for more info.

@@ -1,11 +1,11 @@
 {
   "name": "shortcodes",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A simple library for creating shortcode macros to be used within content blocks",
   "author": {
     "name": "Thomas Rasshofer",
     "email": "hello@thomasrasshofer.com",
-    "url": "http://thomasrasshofer.com/"
+    "url": "https://thomasrasshofer.com/"
   },
   "license": "MIT",
   "repository": {
