@@ -6,9 +6,19 @@ env:
 extends:
   - airbnb-base
   - prettier
+  - plugin:@typescript-eslint/recommended
+parser: '@typescript-eslint/parser'
 plugins:
+  - '@typescript-eslint'
   - prettier
+settings:
+  import/resolver:
+    node:
+      extensions:
+        - '.js'
+        - '.ts'
 rules:
   max-len: 0
   no-mixed-operators: 0
   prettier/prettier: error
+  import/extensions: 0

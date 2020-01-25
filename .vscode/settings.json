@@ -1,0 +1,7 @@
+{
+  "files.exclude": {
+    "*.{d.ts,d.ts.map,js,js.map}": true,
+    "tests/*.{d.ts,d.ts.map,js,js.map}": true
+  },
+  "editor.formatOnSave": true
+}

@@ -16,11 +16,16 @@
     "url": "https://github.com/rasshofer/shortcodes/issues"
   },
   "main": "shortcodes.js",
+  "typings": "shortcodes.d.ts",
   "keywords": [
     "shortcodes",
     "macros"
   ],
   "devDependencies": {
+    "@types/jest": "^24.9.1",
+    "@types/node": "^13.5.0",
+    "@typescript-eslint/eslint-plugin": "^2.17.0",
+    "@typescript-eslint/parser": "^2.17.0",
     "coveralls": "^3.0.9",
     "eslint": "^6.1.0",
     "eslint-config-airbnb-base": "^14.0.0",
@@ -28,10 +33,16 @@
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-prettier": "^3.1.2",
     "jest": "^25.1.0",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "ts-jest": "^25.0.0",
+    "typescript": "^3.7.5"
   },
   "scripts": {
-    "test": "eslint '*.js' 'tests/*.js' && jest --coverage",
+    "prepare": "npm run clean && npm run build",
+    "clean": "tsc --build --clean",
+    "build": "tsc --build --verbose",
+    "watch": "tsc --build --verbose --watch",
+    "test": "eslint '*.ts' 'tests/*.ts' && jest --coverage",
     "coverage": "cat ./coverage/lcov.info | coveralls"
   }
 }

@@ -1,16 +1,29 @@
-const shortcodes = {};
+export type ShortcodeCallbackAttributes = {
+  [key: string]: string;
+};
 
-const add = (generic, callback) => {
+export type ShortcodeCallback = (attrs: ShortcodeCallbackAttributes) => string;
+
+export type ShortcodeMap = {
+  [key: string]: ShortcodeCallback;
+};
+
+const shortcodes: ShortcodeMap = {};
+
+export const add = (
+  generic: string | ShortcodeMap,
+  callback?: ShortcodeCallback,
+): void => {
   if (typeof generic === 'string' && callback) {
     shortcodes[generic] = callback;
   } else {
     Object.keys(generic).forEach(name => {
-      shortcodes[name] = generic[name];
+      shortcodes[name] = (generic as ShortcodeMap)[name];
     });
   }
 };
 
-const parse = input =>
+export const parse = (input: string): string =>
   input.replace(
     /(?=[^\]])\(([a-z0-9_-]+):(.*?)\)/gim,
     (match, name, values) => {
@@ -18,7 +31,7 @@ const parse = input =>
         return match;
       }
 
-      const attrs = {};
+      const attrs: ShortcodeCallbackAttributes = {};
       const splitted = values.split(/(\s*([a-z0-9_-]+):\s*)/gim);
 
       attrs[name] = splitted.shift().trim();
@@ -30,8 +43,3 @@ const parse = input =>
       return shortcodes[name](attrs);
     },
   );
-
-module.exports = {
-  add,
-  parse,
-};

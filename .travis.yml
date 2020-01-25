@@ -2,3 +2,9 @@ sudo: false
 language: node_js
 node_js:
   - '13'
+install:
+  - npm ci --no-optional
+script:
+  - npm run build
+  - npm test
+  - npm run coverage
