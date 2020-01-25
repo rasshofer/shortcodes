@@ -21,10 +21,12 @@
     "macros"
   ],
   "devDependencies": {
-    "jshint": "^2.9.4",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0",
     "tap": "^10.3.2"
   },
   "scripts": {
-    "test": "jshint shortcodes.js test/tests.js && tap test/tests.js --cov"
+    "test": "eslint '*.js' 'test/*.js' && tap test/tests.js --cov"
   }
 }
