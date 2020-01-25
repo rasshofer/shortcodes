@@ -21,12 +21,14 @@
     "macros"
   ],
   "devDependencies": {
+    "coveralls": "^3.0.9",
     "eslint": "^6.1.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.20.0",
-    "tap": "^10.3.2"
+    "jest": "^25.1.0"
   },
   "scripts": {
-    "test": "eslint '*.js' 'test/*.js' && tap test/tests.js --cov"
+    "test": "eslint '*.js' 'tests/*.js' && jest --coverage",
+    "coverage": "cat ./coverage/lcov.info | coveralls"
   }
 }

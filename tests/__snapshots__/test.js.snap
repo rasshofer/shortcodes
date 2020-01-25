@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Parsing ignore 1`] = `
+"Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+
+(someInvalidShortcodeKey: 123)
+
+Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+"
+`;
+
+exports[`Parsing parameters 1`] = `
+"Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+
+<div class=\\"youtube\\" style=\\"padding-top:66.66666666666666%\\"><iframe src=\\"https://www.youtube.com/embed/jNQXAC9IVRw\\" frameborder=\\"0\\"></iframe></div>
+
+Sed diam nonumy eirmod tempor invidunt ut labore et.
+
+<div class=\\"youtube\\" style=\\"padding-top:56.25%\\"><iframe src=\\"https://www.youtube.com/embed/DLzxrzFCyOs\\" frameborder=\\"0\\"></iframe></div>
+
+Dolore magna aliquyam erat, sed diam voluptua.
+"
+`;
+
+exports[`Parsing works 1`] = `
+"Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+
+15129
+
+Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+
+3
+"
+`;
